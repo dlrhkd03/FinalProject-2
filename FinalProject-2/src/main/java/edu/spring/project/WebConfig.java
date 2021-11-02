@@ -11,10 +11,10 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addResourceHandler("/naverimages/**")   //사용하는 이미지들을 호출하는 url = naverimages
         .addResourceLocations("file:///C:/Users/jjyju/OneDrive/바탕 화면/멀티캠퍼스/네이버AI 수업/images/");
         registry.addResourceHandler("/upload/**")   //사용하는 이미지들을 호출하는 url = naverimages
-        .addResourceLocations("file:///C:/kdigital2/upload/");
+        .addResourceLocations("file:/usr/mydir/upload/");
         registry.addResourceHandler("/imgs/**").addResourceLocations("classpath:/static/imgs/");
         registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
-        registry.addResourceHandler("/notice/**").addResourceLocations("file:///C:/kdigital2/notice/");
+        registry.addResourceHandler("/notice/**").addResourceLocations("file:/usr/mydir/upload/");
     }
 }
 

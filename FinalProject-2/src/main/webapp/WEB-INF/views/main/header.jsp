@@ -66,6 +66,10 @@ $(document).ready(function(){
 
 
 
+function chatbot(){ 
+	chatbot = window.open("chatbotstart","","height=680,width=500,top=100,left=100");
+}
+
 </script>
 
 
@@ -79,9 +83,9 @@ $(document).ready(function(){
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
           <div class="collapse navbar-collapse border-lg-0 my-2 mt-lg-0" id="navbarSupportedContent">
             <div class="ms-auto">
-				<div class="btn-group"><a href="#"><i class="fas fa-comment-medical fa-2x text-warning input-box-icon"></i></a></div>&emsp;
-              <button class="btn btn-white shadow-warning text-warning" type="button" onclick="location.href='/noticelist'">공지사항</button>
-              <button class="btn btn-white shadow-warning text-warning" type="button" onclick="location.href='/recipelist'">레시피 게시판</button>&emsp;&emsp;
+				<div class="btn-group"><a href="#" onclick="chatbot()"><i class="fas fa-comment-medical fa-2x text-warning input-box-icon"></i></a></div>&emsp;
+              <button id="notice1" class="btn btn-white shadow-warning text-warning" type="button" onclick="location.href='/noticelist'">공지사항</button>
+              <button id="recipe1" class="btn btn-white shadow-warning text-warning" type="button" onclick="location.href='/recipelist'">레시피 게시판</button>&emsp;&emsp;
               <div class="btn-group" >
               <c:if test="${empty login_info }">
               <div class="btn-group">

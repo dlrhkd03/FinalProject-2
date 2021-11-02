@@ -36,10 +36,13 @@
 	min-width: 8rem;
 }
 
-#emotion_q, #emotion_a, #nation_q, #nation_a ,#cate_q ,#cate_a, #ingredient_q, #ingredient_a, #findbtn {display:none; text-align: center;}
+#emotion_q, #emotion_a, #nation_q, #nation_a ,#cate_q ,#cate_a, #ingredient_q, #ingredient_a, #findbtn {
+	display:none;
+	text-align: center;
+	}
 
 #tooltip {
-    width: 500px;
+    width: 100%;
     background: #f3f3f3;
     border: 1px solid #d8d8d8;
     text-align: center;
@@ -47,6 +50,8 @@
 #tooltip div {
     position: relative;
     display: inline-block;
+    margin-bottom:0.3rem;
+    margin-top:0.3rem;
 }
 
 #tooltip span {
@@ -123,7 +128,7 @@
                     
                     <!-- 레시피검색 결과 0일때 -->
                     <c:if test="${fn:length(resultlist) == 0}">
-                  	  <div class="col-lg-40 mx-auto text-center mt-7 mb-5">
+                  	  <div class="col-lg-40 mx-auto text-center mt-7 mb-4">
 			              <h5 class="fw-bold fs-3 fs-lg-5 lh-sm">다른 키워드로 검색해 주세요. </h5>
 			          </div>
 			           <div class="col-12">
@@ -132,27 +137,27 @@
 			          <div class="carousel-item active" data-bs-interval="10000">
 		              <div class="row gx-3 h-100 align-items-center">
 		              
-                    	<div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
+                    	<div class="col-sm-6 col-md-4 col-xl mb-4 h-100">
                         <div class="card card-span h-100 rounded-3">
-                        <img class="img-fluid rounded-3" src="upload/resultx.png" alt="" />
+                        <img class="rounded-3" src="mainassets/assets/img/gallery/resultx.png" alt="" />
                           <div class="card-body ps-0">
                             <h5 class="fw-bold text-1000 text-truncate mb-1"> </h5>
                             <div><span class="text-warning me-2"> </span></div>
                           </div>
                         </div>
                       </div>  
-                      <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
+                      <div class="col-sm-6 col-md-4 col-xl mb-4 h-100">
                         <div class="card card-span h-100 rounded-3">
-                        <img class="img-fluid rounded-3" src="mainassets/assets/img/gallery/resultx.png" alt="" />
+                        <img class="rounded-3" src="mainassets/assets/img/gallery/resultx.png" alt="" />
                           <div class="card-body ps-0">
                             <h5 class="fw-bold text-1000 text-truncate mb-1"> </h5>
                             <div><span class="text-warning me-2"> </span></div>
                           </div>
                         </div>
                       </div>  
-                      <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                        <div class="card card-span h-100 rounded-3">
-                        <img class="img-fluid rounded-3" src="mainassets/assets/img/gallery/resultx.png" alt="" />
+                      <div class="col-sm-6 col-md-4 col-xl mb-4 h-100">
+                        <div class="card card-span h-100 rounded-4">
+                        <img class="rounded-3" src="mainassets/assets/img/gallery/resultx.png" alt="" />
                           <div class="card-body ps-0">
                             <h5 class="fw-bold text-1000 text-truncate mb-1"> </h5>
                             <div><span class="text-warning me-2"> </span></div>
@@ -163,8 +168,8 @@
                     
                     <!-- 레시피검색 결과 0이 아닐때 -->
                     <c:if test="${fn:length(resultlist) != 0}">
-                    <div class="col-lg-40 mx-auto text-center mt-7 mb-5">
-			           <h5 class="fw-bold fs-3 fs-lg-5 lh-sm"> </h5>
+                    <div class="col-lg-40 mx-auto text-center mt-5 mb-4">
+			           <h5 class="fw-bold fs-4 fs-lg-4 lh-sm">"추천 레시피"</h5>
 			        </div>
 			        <div class="col-12">
 			        <div class="carousel slide" id="carouselPopularItems2" data-bs-touch="false" data-bs-interval="false">
@@ -173,16 +178,16 @@
                     <div class="row gx-3 h-100 align-items-center">
                     
                     <c:forEach items="${resultlist }" var="resultlist" varStatus="status">
-                      <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
+                      <div class="col-sm-6 col-md-4 col-xl mb-3 h-100">
                         <div class="card card-span h-100 rounded-3">
                         
                         	
                       		<c:set var="recipe_img" value="${resultlist.recipe_img }"/>
 							<c:if test="${fn:contains(recipe_img, 'https')}">
-								<img class="img-fluid rounded-3" src="${resultlist.recipe_img }" height="200" width="200">
+								<img class="rounded-3" src="${resultlist.recipe_img }" height="200" width="200">
 							</c:if>
 							<c:if test="${not fn:contains(recipe_img, 'https')  }">
-								<img class="img-fluid rounded-3" src="/upload/${resultlist.recipe_img }" alt="..." style="width:333px;height:203px;object-fit: cover;">
+								<img class="rounded-3" src="mainassets/assets/img/gallery/resultx.png" alt="..." style="width:200px;height:200px;object-fit: cover;">
 							</c:if>
                         
                         <div class="card-img-overlay ps-0" style="padding:0rem;">
@@ -194,7 +199,7 @@
                 	     
                           <div class="card-body ps-0">
                           
-                            <h5 class="fw-bold text-1000 text-truncate mb-1">${resultlist.recipe_title }</h5>
+                            <h5 class="fw-bold text-1000 text-truncate mb-1" style="width:200px">${resultlist.recipe_title }</h5>
                             
                             <div><span style="color:black;">${resultlist.recipe_name }</span></div>
                             <span class="text-primary fs--1" style="justify-content: flex-end;">조회수</span>
@@ -204,10 +209,10 @@
                       </div>
                       
                       <c:if test="${status.index==1 && status.last}">
-                      <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
+                      <div class="col-sm-6 col-md-4 col-xl mb-4 h-100">
                         <div class="card card-span h-100 rounded-3">
                         
-                        	<img class="img-fluid rounded-3" src="mainassets/assets/img/gallery/resultx.png" alt="" style="width:333px;height:203px;object-fit: cover;"/>
+                        	<img class="rounded-3" src="mainassets/assets/img/gallery/resultx.png" alt="" style="width:200px;height:200px;object-fit: cover;"/>
                         
                           <div class="card-body ps-0">
                             <h5 class="fw-bold text-1000 text-truncate mb-1"> </h5>
@@ -219,10 +224,10 @@
                       </c:if>
                       
                       <c:if test="${status.index==0 && status.last}">
-                      <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
+                      <div class="col-sm-6 col-md-4 col-xl mb-4 h-100">
                         <div class="card card-span h-100 rounded-3">
                         
-                        	<img class="img-fluid rounded-3" src="mainassets/assets/img/gallery/resultx.png" alt="" style="width:333px;height:203px;object-fit: cover;"/>
+                        	<img class="rounded-3" src="mainassets/assets/img/gallery/resultx.png" alt="" style="width:200px;height:200px;object-fit: cover;"/>
                         
                           <div class="card-body ps-0">
                          	<h5 class="fw-bold text-1000 text-truncate mb-1"> </h5>
@@ -231,10 +236,10 @@
                           </div>
                         </div>
                       </div>  
-                      <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
+                      <div class="col-sm-6 col-md-4 col-xl mb-4 h-100">
                         <div class="card card-span h-100 rounded-3">
                       
-                        	<img class="img-fluid rounded-3" src="mainassets/assets/img/gallery/resultx.png" alt="" style="width:333px;height:203px;object-fit: cover;"/>
+                        	<img class="rounded-3" src="mainassets/assets/img/gallery/resultx.png" alt="" style="width:200px;height:200px;object-fit: cover;"/>
                         	
                         
                           <div class="card-body ps-0">
@@ -261,7 +266,7 @@
             <!-- 레시피 검색 결과 전체 끝 -->
  		<!-- 분류 레시피 -->
  		
- 		<table border="1">
+ 		<table>
  		
 		<tr><th>추천레시피</th></tr>
 		<c:forEach items="${findList }" var="recipe">
@@ -321,10 +326,14 @@
                       <div class="row gx-2 gy-2 align-items-center">
                         <div class="col">
                         <form action="/find" method="get" onsubmit="return find()">					
-						<tr><td><input class="btn btn-danger" type="button" id="find"  value="레시피를 추천받고 싶나요?"></td></tr>
-						<table border="1" style="margin-top:5px;">
+						<table style="margin-top:5px; width:100%">
+						<tr><td>
+							<div style="width:55%; margin:auto;">
+								<input class="btn btn-danger mb-2"  type="button" id="find"  value="레시피를 추천받고 싶나요?">
+							</div>
+						</td></tr>
 							<tr>
-								<th id="emotion_q">오늘 기분이 어때요?</th>
+								<th class="pt-2"  id="emotion_q">오늘 기분이 어때요?</th>
 							</tr>
 							<tr>
 								<td id="emotion_a">
@@ -334,16 +343,16 @@
 										<p class="tooltip_box">기분 좋은 날엔 손이 조금 가더라도 근사한 음식을 해먹어봐요!</p></div>
 										
 										<div><span><input class="emotion" type="radio" name="recipe_emotion" value="입맛없음">😐</span>
-										<p class="tooltip_box">입맛이 없을 땐 입맛을 돋궈주는 상큼한 음식을 먹어봐요</p></div>
+										<p class="tooltip_box">입맛이 없을 땐, 입맛을 돋궈주는 상큼한 음식을 먹어봐요!</p></div>
 										
 										<div><span><input class="emotion" type="radio" name="recipe_emotion" value="우울">😥</span> 
-										<p class="tooltip_box">우울함엔 마그네슘, 비타민 B, 엽산 등이 풍부한 음식을 추천드려요!</p></div>
+										<p class="tooltip_box">우울할 때는 마그네슘, 비타민 B, 엽산 등이 풍부한 음식을 추천드려요!</p></div>
 										
 										<div><span><input class="emotion" type="radio" name="recipe_emotion" value="화남">🤬</span>
 										<p class="tooltip_box">화가 나는 날엔  비타민 D, 오메가 3 등이 들어간 음식을 먹어봐요! 또한, 매운음식은 아드레날린과 엔도르핀을 분비합니다.</p></div>
 										
 										<div><span><input class="emotion" type="radio" name="recipe_emotion" value="아픔">😷</span>
-										<p class="tooltip_box">아플 땐 든든한 고기류나 염분이 많지 않은 속편한 음식을 먹어보세요</p></div>
+										<p class="tooltip_box">아플 땐 든든한 고기류나 염분이 많지 않은 속편한 음식을 먹어보세요~</p></div>
 									</div>
 								</td>
 							</tr>
@@ -392,7 +401,9 @@
 								</td>
 							</tr>
 						</table>
-							<input class="btn btn-danger" id="findbtn" type="submit"  style="margin-top:5px;" value="레시피 찾기">
+							<div style="width:35%; margin:auto;">
+								<input class="btn btn-danger" id="findbtn" type="submit"  style="margin-top:15px;" value="레시피 찾기">
+							</div>
 						</form>
                         </div>
                       </div>
@@ -417,7 +428,7 @@
         <div class="container">
           <div class="row h-100">
             <div class="col-lg-7 mx-auto text-center mt-7 mb-5">
-              <h5 class="fw-bold fs-3 fs-lg-5 lh-sm">화제의 레시피</h5>
+              <h5 class="fw-bold fs-4 fs-lg-5 lh-sm">" 인기 레시피 "</h5>
             </div>
             <div class="col-12">
               <div class="carousel slide" id="carouselPopularItems" data-bs-touch="false" data-bs-interval="false">
@@ -432,10 +443,10 @@
                         <a href="javascript:void(0);" onclick="detail(${popularlist.recipe_no});" >
                         	<c:set var="recipe_img" value="${popularlist.recipe_img }"/>
 							<c:if test="${fn:contains(recipe_img, 'https')}">
-								<img class="img-fluid rounded-3" src="${popularlist.recipe_img }" height="200" width="260" style="object-fit: cover;">
+								<img class="rounded-3" src="${popularlist.recipe_img }" height="200" width="260" style="object-fit: cover;">
 							</c:if>
 							<c:if test="${not fn:contains(recipe_img, 'https')  }">
-								<img class="img-fluid rounded-3" src="/upload/${popularlist.recipe_img }" alt="..." height="200" width="260" style="object-fit: cover;">
+								<img class="rounded-3" src="/upload/${popularlist.recipe_img }" alt="..." height="200" width="260" style="object-fit: cover;">
 							</c:if>
                         </a>  
                           <div class="card-body ps-0">
@@ -461,17 +472,17 @@
                         	
 							<c:set var="recipe_img" value="${popularlist.recipe_img }"/>
 							<c:if test="${fn:contains(recipe_img, 'https')}">
-								<img class="img-fluid rounded-3" src="${popularlist.recipe_img }" height="200" width="260" style="object-fit: cover;">
+								<img class="rounded-3" src="${popularlist.recipe_img }" height="200" width="260" style="object-fit: cover;">
 							</c:if>
 							<c:if test="${not fn:contains(recipe_img, 'https')  }">
-								<img class="img-fluid rounded-3" src="/upload/${popularlist.recipe_img }" alt="..." height="200" width="260" style="object-fit: cover;">
+								<img class="rounded-3" src="/upload/${popularlist.recipe_img }" alt="..." height="200" width="260" style="object-fit: cover;">
 							</c:if>
 							
                         </a>  
                           <div class="card-body ps-0">
                             <h5 class="fw-bold text-1000 text-truncate mb-1">${popularlist.recipe_title }</h5>
                             <div><span style="color:black;">${popularlist.recipe_name }</span></div>
-                            <span class="text-primary fs-1" style="justify-content: flex-end;">조회수</span>
+                            <span class="text-primary fs--1" style="justify-content: flex-end;">조회수</span>
                       		<span class="mb-1 text-primary"> ${popularlist.recipe_hits}</span>
                           </div>
                         </div>

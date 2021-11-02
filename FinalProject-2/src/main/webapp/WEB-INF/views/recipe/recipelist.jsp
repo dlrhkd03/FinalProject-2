@@ -7,7 +7,7 @@
 <head>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>오늘 뭐 해먹지? : RECIPE</title>
+    <title>오늘 뭐 해먹지?</title>
     
     <link href="mainassets/assets/css/theme.css" rel="stylesheet" />
     
@@ -91,6 +91,29 @@ div.editable {
 	font-weight: 700;
 
 }
+#recipe1{
+	background-color: #FFB30E;
+	color:white !important;
+}
+#tr1 #${nation}{
+  	background-color: #435ebe;
+	color:white !important;
+	border-radius: 0.3rem!important;
+	
+}
+#tr2 #${cate}{
+  	background-color: #435ebe;
+	color:white !important;
+	border-radius: 0.3rem!important;
+
+}
+#tr3 #${emotion}{
+  	background-color: #435ebe;
+	color:white !important;
+	border-radius: 0.3rem!important;
+
+}
+
 
 </style>
 <script>
@@ -114,8 +137,7 @@ $(document).ready(function(){
 				                  "<div class='d-flex align-items-center mb-1'>" + 
 				                    "<div class='flex-1'>" + 
 				                      "<div class='mb-0 fw-bold text-1000'>" + 
-				                      "<a href='/recipedetail?recipe_no=" + serverdata[i].recipe_no + "'>" + serverdata[i].recipe_title + "</a>" + 
-					                	"<a href='javascript:void(0);' onclick='' style='color:#dc3545; float: right;'><i class='fas fa-heart' title='목록에서 삭제'></i></a>" +  
+				                      "<a href='/recipedetail?recipe_no=" + serverdata[i].recipe_no + "'>" + serverdata[i].recipe_title + "</a>" +
 					                 "</div>" + 
 				                      "<div><span style='color:black;padding:0px;'>" + serverdata[i].recipe_name + "</span></div>" + 
 				                    "</div>" + 
@@ -134,7 +156,6 @@ $(document).ready(function(){
 						                    "<div class='flex-1'>" + 
 						                      "<div class='mb-0 fw-bold text-1000'>" + 
 						                      "<a href='/recipedetail?recipe_no=" + serverdata[i].recipe_no + "'>" + serverdata[i].recipe_title + "</a>" + 
-							                	"<a href='javascript:void(0);' onclick='' style='color:#dc3545; float: right;'><i class='fas fa-heart' title='목록에서 삭제'></i></a>" +  
 							                 "</div>" + 
 						                      "<div><span style='color:black;padding:0px;'>" + serverdata[i].recipe_name + "</span></div>" + 
 						                    "</div>" + 
@@ -187,33 +208,33 @@ $(document).ready(function(){
                                     <div class="table-responsive">
                                         <table class="table mb-0" style="text-align: center;">
                                             <tbody>
-                                                <tr class="table-warning" style="border-bottom: 10px solid #fff;">
+                                                <tr id="tr1" class="table-warning" style="border-bottom: 10px solid #fff;">
                                                     <td class="fw-bold" style="background: white;border-bottom: none;">종류별</td>
-                                                    <td><a href="javascript:goSearchRecipe('nation','')">전 체</a></td>
-                                                    <td><a href="javascript:goSearchRecipe('nation','한식')">한 식</a></td>
-                                                    <td><a href="javascript:goSearchRecipe('nation','일식')">일 식</a></td>
-                                                    <td><a href="javascript:goSearchRecipe('nation','양식')">양 식</a></td>
-                                                    <td><a href="javascript:goSearchRecipe('nation','중식')">중 식</a></td>
-                                                    <td><a href="javascript:goSearchRecipe('nation','기타')">기 타</a></td>
+                                                    <td><a style="padding :5px 15px;" id="전체" href="javascript:goSearchRecipe('nation','')">전 체</a></td>
+                                                    <td><a style="padding :5px 15px;" id="한식" href="javascript:goSearchRecipe('nation','한식')">한 식</a></td>
+                                                    <td><a style="padding :5px 15px;" id="일식" href="javascript:goSearchRecipe('nation','일식')">일 식</a></td>
+                                                    <td><a style="padding :5px 15px;" id="양식" href="javascript:goSearchRecipe('nation','양식')">양 식</a></td>
+                                                    <td><a style="padding :5px 15px;" id="중식" href="javascript:goSearchRecipe('nation','중식')">중 식</a></td>
+                                                    <td><a style="padding :5px 15px;" id="기타" href="javascript:goSearchRecipe('nation','기타')">기 타</a></td>
                                                 </tr>
-                                                <tr class="table-info" style="border-bottom: 10px solid #fff;">
+                                                <tr id="tr2" class="table-info" style="border-bottom: 10px solid #fff;">
                                                     <td class="fw-bold" style="background: white;border-bottom: none;border-top: none;">재료별</td>
-                                                    <td><a href="javascript:goSearchRecipe('cate','')">전 체</a></td>
-                                                    <td><a href="javascript:goSearchRecipe('cate','육류')">육 류</a></td>
-                                                    <td><a href="javascript:goSearchRecipe('cate','채소류')">채소류</a></td>
-                                                    <td><a href="javascript:goSearchRecipe('cate','해물류')">해물류</a></td>
-                                                    <td><a href="javascript:goSearchRecipe('cate','달걀유제품')">달걀/유제품</a></td>
-                                                    <td><a href="javascript:goSearchRecipe('cate','기타')">기타</a></td>
+                                                    <td><a style="padding :5px 15px;" id="전체" href="javascript:goSearchRecipe('cate','')">전 체</a></td>
+                                                    <td><a style="padding :5px 15px;" id="육류" href="javascript:goSearchRecipe('cate','육류')">육 류</a></td>
+                                                    <td><a style="padding :5px 15px;" id="채소류" href="javascript:goSearchRecipe('cate','채소류')">채소류</a></td>
+                                                    <td><a style="padding :5px 15px;" id="해물류" href="javascript:goSearchRecipe('cate','해물류')">해물류</a></td>
+                                                    <td><a style="padding :5px 15px;" id="달걀유제품" href="javascript:goSearchRecipe('cate','달걀유제품')">달걀/유제품</a></td>
+                                                    <td><a style="padding :5px 15px;" id="기타" href="javascript:goSearchRecipe('cate','기타')">기 타</a></td>
                                                 </tr>
                                                 
-                                                <tr class="table-light">
+                                                <tr id="tr3" class="table-light">
                                                     <td class="fw-bold" style="background: white;">기분별</td>
-                                                    <td><a href="javascript:goSearchRecipe('emotion','')">전 체</a></td>
-                                                    <td><a href="javascript:goSearchRecipe('emotion','좋음')" data-bs-toggle="tooltip" data-bs-placement="top" title="기분 좋은 날엔 손이 조금 가더라도 근사한 음식을 해먹어봐요!"><i class="fas fa-smile text-warning" style="font-size: 1.7rem;"></i></a></td>
-                                                    <td><a href="javascript:goSearchRecipe('emotion','입맛없음')" data-bs-toggle="tooltip" data-bs-placement="top" title="입맛이 없을 땐 입맛을 돋궈주는 상큼한 음식을 먹어봐요"><i class="fas fa-meh text-warning" style="font-size: 1.7rem;"></i></a></td>
-                                                    <td><a href="javascript:goSearchRecipe('emotion','우울')" data-bs-toggle="tooltip" data-bs-placement="top" title="우울함엔 마그네슘, 비타민 B, 엽산 등이 풍부한 음식을 추천드려요!"><i class="fas fa-meh-rolling-eyes text-warning" style="font-size: 1.7rem;"></i></a></td>
-                                                    <td><a href="javascript:goSearchRecipe('emotion','화남')" data-bs-toggle="tooltip" data-bs-placement="top" title="화가 나는 날엔  비타민 D, 오메가 3 등이 들어간 음식을 먹어봐요! 또한, 매운음식은 아드레날린과 엔도르핀을 분비합니다."><i class="fas fa-angry text-warning" style="font-size: 1.7rem;"></i></a></td>
-                                                    <td><a href="javascript:goSearchRecipe('emotion','아픔')" data-bs-toggle="tooltip" data-bs-placement="top" title="아플 땐 든든한 고기류나 염분이 많지 않은 속편한 음식을 먹어보세요"><i class="fas fa-tired text-warning" style="font-size: 1.7rem;"></i></a></td>
+                                                    <td><a style="padding :12px 15px 5px 15px;" id="" href="javascript:goSearchRecipe('emotion','')">전 체</a></td>
+                                                    <td><a style="padding :12px 15px 5px 15px;" id="좋음" href="javascript:goSearchRecipe('emotion','좋음')" data-bs-toggle="tooltip" data-bs-placement="top" title="기분 좋은 날엔 손이 조금 가더라도 근사한 음식을 해먹어봐요!"><i class="fas fa-smile text-warning" style="font-size: 1.7rem;"></i></a></td>
+                                                    <td><a style="padding :12px 15px 5px 15px;" id="입맛없음" href="javascript:goSearchRecipe('emotion','입맛없음')" data-bs-toggle="tooltip" data-bs-placement="top" title="입맛이 없을 땐 입맛을 돋궈주는 상큼한 음식을 먹어봐요"><i class="fas fa-meh text-warning" style="font-size: 1.7rem;"></i></a></td>
+                                                    <td><a style="padding :12px 15px 5px 15px;" id="우울" href="javascript:goSearchRecipe('emotion','우울')" data-bs-toggle="tooltip" data-bs-placement="top" title="우울함엔 마그네슘, 비타민 B, 엽산 등이 풍부한 음식을 추천드려요!"><i class="fas fa-meh-rolling-eyes text-warning" style="font-size: 1.7rem;"></i></a></td>
+                                                    <td><a style="padding :12px 15px 5px 15px;" id="화남" href="javascript:goSearchRecipe('emotion','화남')" data-bs-toggle="tooltip" data-bs-placement="top" title="화가 나는 날엔  비타민 D, 오메가 3 등이 들어간 음식을 먹어봐요! 또한, 매운음식은 아드레날린과 엔도르핀을 분비합니다."><i class="fas fa-angry text-warning" style="font-size: 1.7rem;"></i></a></td>
+                                                    <td><a style="padding :12px 15px 5px 15px;" id="아픔" href="javascript:goSearchRecipe('emotion','아픔')" data-bs-toggle="tooltip" data-bs-placement="top" title="아플 땐 든든한 고기류나 염분이 많지 않은 속편한 음식을 먹어보세요"><i class="fas fa-tired text-warning" style="font-size: 1.7rem;"></i></a></td>
                                                     
                                                 </tr>
                                             </tbody>
@@ -284,7 +305,6 @@ $(document).ready(function(){
 		                               
 		                    <select name="type" class="form-select" id="type">
 								<option value="recipe_title">레시피 제목</option>
-								<option value="recipe_desc">레시피 내용</option>
 								<option value="recipe_name">음식명</option>
 								<option value="recipe_ingredient">재료명</option>
 							</select>
@@ -305,6 +325,7 @@ $(document).ready(function(){
             <div class="col-sm-6 col-md-4 col-lg-3 h-100 mb-5">
               <div class="card card-span h-100 text-white rounded-3" style="margin-bottom:0rem;">
               <a href="/recipedetail?recipe_no=${recipe.recipe_no }">
+              <c:set var="recipe_img" value="${recipe.recipe_img }"/>
              	<c:if test="${fn:contains(recipe_img, 'https')}">
           			<img title="상세 페이지로 이동" alt="오류" class="img-fluid rounded-3" src="${recipe.recipe_img }" style="width:333px;height:283px;object-fit: cover;" />
           		</c:if>
@@ -317,7 +338,6 @@ $(document).ready(function(){
                     <div class="flex-1">
                       <div class="mb-0 fw-bold text-1000">
                       <a href="/recipedetail?recipe_no=${recipe.recipe_no }">${recipe.recipe_title }</a>
-	                	<a href='javascript:void(0);' onclick="delete1(${recipe.recipe_no});" style="color:#dc3545; float: right;"><i class="fas fa-heart" title="목록에서 삭제"></i></a>
 	                 </div>
                       <div><span style="color:black;padding:0px;">${recipe.recipe_name }</span></div>  
                     </div>

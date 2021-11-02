@@ -44,7 +44,10 @@
 			font-weight: 700;
 		
 		}
-		
+		#notice1{
+			background-color: #FFB30E;
+			color:white !important;
+		}
 	</style>
 	
 </head>
@@ -84,16 +87,18 @@
                             	
                             	
 	                            	<div class="input-group mb-3" id="target">
-		                            	<c:if test="${modifynotice.notice_file ne '' && modifynotice.notice_file ne null}">
+		                            	<c:if test="${modifynotice.notice_file ne null}">
 		                            		<span class="input-group-text" id="basic-addon1"><i class="fas fa-upload"></i></span>
 		                                    <span class="input-group-text" id="basic-addon1" style="background-color:#F5F5F5;"><a href="/notice/${modifynotice.notice_file}" download > ${modifynotice.notice_file} </a></span>
 		                                    <span class="input-group-text" id="basic-addon1"><a href='javascript:void(0);' onclick="script:fileCheck()"><i class="fas fa-times"></i></a></span>
 		                                    <input type="hidden" id="notice_file" name="notice_file" value="${modifynotice.notice_file}">
 		                                    <input type="hidden" id="notice_no" name="notice_no" value="${modifynotice.notice_no}">
+		                                    
 		                                </c:if>
-		                                <c:if test="${modifynotice.notice_file eq null || modifynotice.notice_file eq ''}">
+		                                <c:if test="${modifynotice.notice_file eq null }">
 		                              	  <span class="input-group-text" id="basic-addon1"><i class="fas fa-upload"></i></span>
 		                                  <input type="hidden" id="notice_no" name="notice_no" value="${modifynotice.notice_no}">
+		                                  <input type="hidden" id="notice_file" name="notice_file" value="${modifynotice.notice_file}">
 		                                  <input type="file" class="form-control" id="inputGroupFile01" name="uploadfile" id="uploadfile">
 		                                </c:if>
 	                                </div>

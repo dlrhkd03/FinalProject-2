@@ -7,6 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 import admin.AdminController;
 import admin.AdminDAO;
+import chatbot.NaverChatbotController;
 import email.EmailController;
 import ingredient.IngredientController;
 import ingredient.IngredientDAO;
@@ -43,6 +44,7 @@ import recipe.RecipeImgDAO;
 @MapperScan(basePackageClasses = AdminDAO.class)
 @MapperScan(basePackageClasses = NoticeDAO.class)
 @MapperScan(basePackageClasses = IngredientDAO.class)
+@ComponentScan(basePackageClasses = NaverChatbotController.class)
 public class FinalProject2Application {
 
 	public static void main(String[] args) {

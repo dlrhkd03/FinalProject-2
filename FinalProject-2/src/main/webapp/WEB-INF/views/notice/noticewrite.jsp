@@ -34,6 +34,10 @@
 			font-weight: 700;
 		
 		}
+		#notice1{
+			background-color: #FFB30E;
+			color:white !important;
+		}
 	</style>
 	
 </head>

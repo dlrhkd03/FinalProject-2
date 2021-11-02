@@ -99,7 +99,17 @@ div.editable {
 	font-weight: 700;
 
 }
-
+.formimage {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.3rem!important;
+ 
+}
+#recipe1{
+			background-color: #FFB30E;
+			color:white !important;
+		}
 </style>
 </head>
 <body>
@@ -156,6 +166,7 @@ String[] ingredient = {"소고기","돼지고기", "닭고기", "양고기", "�
 								<tr>
 									<th>음식 설명</th>
 									<td colspan="3"><textarea rows="5" cols="50" name="recipe_desc" id="recipe_desc" class="form-control"></textarea></td>
+									<input type="hidden" name="recipe_desc" id="recipe_desc" value="구간나누기입니다">
 								</tr>
 							<!-- 분류 -->
 								<tr>
@@ -166,40 +177,47 @@ String[] ingredient = {"소고기","돼지고기", "닭고기", "양고기", "�
 									<div class="form-check me-3" style="display:inline-block;">
                                         <input class="form-check-input" type="radio" 
                                             id="recipe_cate" name="recipe_cate" value="육류" checked>
-                                        <label class="form-check-label" for="recipe_cate">
+                                        <label class="form-check-label" for="육류">
                                             육류
                                         </label>
                                     </div>
                                     <div class="form-check me-3" style="display:inline-block;">
-                                        <input class="form-check-input" type="radio" name="recipe_cate" value="해물류"
-                                            id="flexRadioDefault2">
-                                        <label class="form-check-label" for="flexRadioDefault2">
+                                        <input class="form-check-input" type="radio" name="recipe_cate" value="해물류">
+                                        <label class="form-check-label">
                                             해물류
                                         </label>
                                     </div>
                                     <div class="form-check me-3" style="display:inline-block;">
-                                        <input class="form-check-input" type="radio" name="recipe_cate" value="채소류"
-                                            id="flexRadioDefault3">
-                                        <label class="form-check-label" for="flexRadioDefault3">
+                                        <input class="form-check-input" type="radio" name="recipe_cate" value="채소류">
+                                        <label class="form-check-label">
                                             채소류
                                         </label>
                                     </div>
                                     <div class="form-check me-3" style="display:inline-block;">
-                                        <input class="form-check-input" type="radio" name="recipe_cate" value="달걀유제품류"
-                                            id="flexRadioDefault4">
-                                        <label class="form-check-label" for="flexRadioDefault4">
+                                        <input class="form-check-input" type="radio" name="recipe_cate" value="달걀유제품류">
+                                        <label class="form-check-label">
                                             달걀/유제품류
                                         </label>
                                     </div>
                                     <div class="form-check me-3" style="display:inline-block;">
-                                        <input class="form-check-input" type="radio" name="recipe_cate" value="기타"
-                                            id="flexRadioDefault5">
-                                        <label class="form-check-label" for="flexRadioDefault5">
+                                        <input class="form-check-input" type="radio" name="recipe_cate" value="기타">
+                                        <label class="form-check-label">
                                             기타
                                         </label>
                                     </div>
 									</td>
 								</tr>
+								
+								<!-- <th rowspan="2">분류</th>
+		<td colspan="3">
+		<input type="radio" name="recipe_cate" id="육류" value="육류">육류
+		<input type="radio" name="recipe_cate" id="해물류" value="해물류">해물류
+		<input type="radio" name="recipe_cate" id="채소류" value="채소류">채소류
+		<input type="radio" name="recipe_cate" id="달걀유제품류" value="달걀유제품류">달걀/유제품류
+		<input type="radio" name="recipe_cate" value="기타">기타
+		</td> -->
+								
+								
 							<!-- 종류 -->
 								<tr>
 									<th>음식 종류</th>
@@ -246,7 +264,7 @@ String[] ingredient = {"소고기","돼지고기", "닭고기", "양고기", "�
 									<th>재료</th>
 									<td colspan="3">
 									<div class="a">
-										<button type="button" class="btn btn-outline-primary block" data-bs-toggle="modal"
+										<button type="button" class="btn btn-outline-primary block mb-2" data-bs-toggle="modal"
                                         data-bs-target="#default">
                                         재료 선택
                                     </button>
@@ -445,7 +463,7 @@ String[] ingredient = {"소고기","돼지고기", "닭고기", "양고기", "�
                 <!-- 모달 바디끝 -->
                                                     
 				                <div class="modal-footer">
-				                    <button type="button" class="btn btn-primary ml-1" data-bs-dismiss="modal">
+				                    <button type="button" class="btn btn-primary ml-1" data-bs-dismiss="modal" id="save">
 				                        <i class="bx bx-x d-block d-sm-none"></i>
 				                        <span class="d-none d-sm-block">재료 저장</span>
 				                    </button>
@@ -460,6 +478,9 @@ String[] ingredient = {"소고기","돼지고기", "닭고기", "양고기", "�
                           </div>
                       </div>
 											
+				</div>
+				<div id="savelist">
+				
 				</div>
 				</td>
 			</tr>
@@ -526,7 +547,8 @@ String[] ingredient = {"소고기","돼지고기", "닭고기", "양고기", "�
 									<div id="img1"></div>
 									</td>
 									<th>레시피 내용1</th>
-									<td><textarea rows="5" cols="50" id="recipe_desc1" name="recipe_desc" class="form-control"></textarea></td>
+									<td><textarea rows="9" cols="50" id="recipe_desc1" name="recipe_desc" class="form-control"></textarea></td>
+									<input type="hidden" name="recipe_desc" id="recipe_desc" value="구간나누기입니다">
 								</tr>
 							<c:forEach var="i" begin="2" end="10">
 								<tr>
@@ -537,7 +559,8 @@ String[] ingredient = {"소고기","돼지고기", "닭고기", "양고기", "�
 									<div id="img${i }"></div>
 									</td>
 									<th>레시피 내용${i }</th>
-									<td><textarea rows="5" cols="50" name="recipe_desc" class="form-control"></textarea></td>
+									<td><textarea rows="9" cols="50" name="recipe_desc" class="form-control"></textarea></td>
+									<input type="hidden" name="recipe_desc" id="recipe_desc" value="구간나누기입니다">
 								</tr>
 							</c:forEach>
 							
@@ -563,16 +586,23 @@ String[] ingredient = {"소고기","돼지고기", "닭고기", "양고기", "�
 
 <script type="text/javascript">
 //재료 선택 팝업창
-	/* $(function(){
-		$(".openingred").click(function(){
-			$(".modal").fadeIn();
-		});
-		
-		$(".closeingred").click(function(){
-			$(".modal").fadeOut();
-		})
-		
+$(function(){
+	/* $(".openingred").click(function(){
+		$(".modal").fadeIn();
+	});
+	
+	$(".closeingred").click(function(){
+		$(".modal").fadeOut();
 	}) */
+	$("#save").click(function(){
+		var list = new Array();
+		$('input[name=ingredient]:checked').each(function(index,item){
+			list.push($(item).val());
+		})
+		$("#savelist").html("<h5>선택한 재료 : " + list + "</h5>");
+	})
+	
+}) 
 	//파일 확장자 제한, 사이즈 제한
 	$(document).ready(function(){
 		
@@ -583,6 +613,7 @@ String[] ingredient = {"소고기","돼지고기", "닭고기", "양고기", "�
 		reader.onload = function(event){
 			var img = document.createElement("img"); 
 			img.setAttribute("src", event.target.result);
+			img.setAttribute("class", "formimage");
 			$("div#"+img_name).empty();
 			document.querySelector("div#"+img_name).appendChild(img);
 		}

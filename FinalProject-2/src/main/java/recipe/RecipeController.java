@@ -125,7 +125,7 @@ public class RecipeController {
 		//파일명 추출
 		List<String> filename = new ArrayList<String>();
 		//서버 c:/kdigital2/upload 폴더에 사진 저장
-		String savePath = "c:/kdigital2/upload/";
+		String savePath = "file:/usr/mydir/upload/";
 		List<String> ext = new ArrayList<String>();
 		List<File> file = new ArrayList<File>();
 		
@@ -154,7 +154,7 @@ public class RecipeController {
 		recipeVO.setRecipe_emotion(recipe_emotion);
 		
 		//name=recipe_desc가 11개 있어서 분리
-		String[] desc = recipe_desc.split(",");
+		String[] desc = recipe_desc.split(",구간나누기입니다,");
 		
 		//음식 설명 vo에 저장
 		descVO.setRecipe_desc(desc[0]);
@@ -313,7 +313,7 @@ public class RecipeController {
 		recipeVO.setRecipe_nation(recipe_nation);
 		
 		//name=recipe_desc가 11개 있어서 분리
-		String[] desc = recipe_desc.split(",");
+		String[] desc = recipe_desc.split(",구간나누기입니다,");
 		
 		//음식 설명 vo에 저장
 		descVO.setRecipe_desc(desc[0]);
@@ -322,7 +322,7 @@ public class RecipeController {
 		String filename;
 		String ext;
 		//서버 c:/kdigital2/upload 폴더에 사진 저장
-		String savePath = "c:/kdigital2/upload/";
+		String savePath = "file:/usr/mydir/upload/";
 		File file;
 		
 		//썸네일 사진 저장
@@ -555,8 +555,8 @@ public class RecipeController {
 		service.modifyRecipe(recipeVO);
 		descservice.modifyDesc(descVO);
 		imgservice.modifyImg(imgVO);
-		return "redirect:recipedetail?no=" + recipe_no;
 
+		return "redirect:recipedetail?recipe_no=" + recipe_no;
 	}
 	
 	public static String getUuid() {
@@ -564,7 +564,7 @@ public class RecipeController {
 	}
 	
 	public static void store(MultipartFile img) throws IOException {
-		String savePath = "c:/kdigital2/upload/";
+		String savePath = "file:/usr/mydir/upload/";
 		String filename = img.getOriginalFilename();
 		//확장자
 		String ext = (filename.substring(filename.lastIndexOf(".")));

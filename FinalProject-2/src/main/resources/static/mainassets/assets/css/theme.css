@@ -18497,4 +18497,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 |   User Styles
 -----------------------------------------------*/
 
+.marquee {
+  padding:0.5em 0;
+  overflow:hidden;
+  margin-bottom:10px;
+  position:relative;
+}
+
 /*# sourceMappingURL=theme.css.map */

@@ -136,7 +136,7 @@ $(document).ready(function(){
 				                "<div class='card-body p-2'>" + 
 				                  "<div class='d-flex align-items-center mb-1'>" + 
 				                    "<div class='flex-1'>" + 
-				                      "<div class='mb-0 fw-bold text-1000'>" + 
+				                      "<div class='mb-0 fw-bold text-1000 text-truncate'>" + 
 				                      "<a href='/recipedetail?recipe_no=" + serverdata[i].recipe_no + "'>" + serverdata[i].recipe_title + "</a>" +
 					                 "</div>" + 
 				                      "<div><span style='color:black;padding:0px;'>" + serverdata[i].recipe_name + "</span></div>" + 
@@ -336,7 +336,7 @@ $(document).ready(function(){
                 <div class="card-body p-2 " >
                   <div class="d-flex align-items-center mb-1">
                     <div class="flex-1">
-                      <div class="mb-0 fw-bold text-1000">
+                      <div class="mb-0 fw-bold text-1000 text-truncates">
                       <a href="/recipedetail?recipe_no=${recipe.recipe_no }">${recipe.recipe_title }</a>
 	                 </div>
                       <div><span style="color:black;padding:0px;">${recipe.recipe_name }</span></div>  

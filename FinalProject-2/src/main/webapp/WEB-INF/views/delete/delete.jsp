@@ -118,7 +118,7 @@ function deletecheck() {
 <div class="page-heading text-center" style="margin-top:90px;">
 <!-- 이 줄 아래에다가만 추가해주세요 -->     
 <h2 class="fw-bold fs-2 fs-lg-5 lh-sm mb-4">가입시 입력한 이메일과 비밀번호를 입력해주세요!</h2>
-	<div class="col-lg-5 mx-auto text-center mb-4" style="background-color:#fff;border-radius:2rem;padding:1.5rem;">
+	<div class="col-lg-10 mx-auto text-center mb-4" style="background-color:#fff;border-radius:2rem;padding:1.5rem;">
 		<form action="/delete" method="post" id="form">
 			
 			<div class="row">

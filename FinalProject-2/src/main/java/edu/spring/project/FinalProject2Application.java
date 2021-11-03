@@ -33,7 +33,6 @@ import recipe.RecipeImgDAO;
 @ComponentScan(basePackageClasses = EmailController.class)
 @ComponentScan(basePackageClasses = MainController.class)
 @ComponentScan(basePackageClasses = IngredientController.class)
-@MapperScan
 @MapperScan(basePackageClasses = UserDAO.class)
 @MapperScan(basePackageClasses = RecipeDAO.class)
 @MapperScan(basePackageClasses = RecipeDescDAO.class)

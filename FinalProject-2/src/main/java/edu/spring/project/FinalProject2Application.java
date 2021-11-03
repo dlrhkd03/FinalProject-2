@@ -11,7 +11,6 @@ import chatbot.NaverChatbotController;
 import email.EmailController;
 import ingredient.IngredientController;
 import ingredient.IngredientDAO;
-import main.MainController;
 import main.UserController;
 import main.UserDAO;
 import mypage.MypageController;
@@ -20,8 +19,6 @@ import notice.NoticeController;
 import notice.NoticeDAO;
 import recipe.RecipeController;
 import recipe.RecipeDAO;
-import recipe.RecipeDescDAO;
-import recipe.RecipeImgDAO;
 
 @SpringBootApplication
 @ComponentScan
@@ -31,18 +28,15 @@ import recipe.RecipeImgDAO;
 @ComponentScan(basePackageClasses = AdminController.class)
 @ComponentScan(basePackageClasses = NoticeController.class)
 @ComponentScan(basePackageClasses = EmailController.class)
-@ComponentScan(basePackageClasses = MainController.class)
 @ComponentScan(basePackageClasses = IngredientController.class)
+@ComponentScan(basePackageClasses = NaverChatbotController.class)
 @MapperScan(basePackageClasses = UserDAO.class)
 @MapperScan(basePackageClasses = RecipeDAO.class)
-@MapperScan(basePackageClasses = RecipeDescDAO.class)
-@MapperScan(basePackageClasses = RecipeImgDAO.class)
 @MapperScan(basePackageClasses = NoticeDAO.class)
 @MapperScan(basePackageClasses = MypageDAO.class)
 @MapperScan(basePackageClasses = AdminDAO.class)
 @MapperScan(basePackageClasses = NoticeDAO.class)
 @MapperScan(basePackageClasses = IngredientDAO.class)
-@ComponentScan(basePackageClasses = NaverChatbotController.class)
 public class FinalProject2Application {
 
 	public static void main(String[] args) {

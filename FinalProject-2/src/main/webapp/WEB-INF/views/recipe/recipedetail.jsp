@@ -420,9 +420,10 @@ $(".zzim-click").click(function() {
 			type : 'get',
 			data : { no : no },
 			success : function() {
+				alert("찜목록에 추가되었습니다");
 				location.href="/recipedetail?recipe_no=${recipe.recipe_no }";
 
-				console.log("찜 추가");
+
 			},
 			error : function() {
 				alert("서버 에러");
@@ -442,9 +443,8 @@ $(".zzim-click").click(function() {
 			type : 'get',
 			data : { no : no },
 			success : function() {
+				alert("찜목록에서 삭제되었습니다");
 				location.href="/recipedetail?recipe_no=${recipe.recipe_no }";
-
-				console.log("찜 해제");
 			},
 			error : function() {
 				alert("서버 에러");

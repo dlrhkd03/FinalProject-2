@@ -136,7 +136,7 @@ function deletecheck() {
 			<div class="row">
 				<div class="col-md-3 fw-bold fs-5 mt-1" style="text-align: left">탈퇴사유 : </div>
 				<div class="col-md-9 form-group">
-				<textarea id = "de_reson" name="de_reson" class="form_control" rows="10" cols="44" placeholder="탈퇴하는 사유를 입력해주세요."> </textarea>
+				<textarea id = "de_reson" name="de_reson" class="form_control" rows="10" cols="44" placeholder="탈퇴하는 사유를 입력해주세요." style="width:100%"> </textarea>
 				</div>
 			</div>
 		</form>

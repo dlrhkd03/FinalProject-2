@@ -70,12 +70,12 @@
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
         </dependency>
-        <!-- json 데이터 parsing을 위한 라이브러리 -->
+  <!--       json 데이터 parsing을 위한 라이브러리
 		<dependency>           
 		   <groupId>org.json</groupId>
 		   <artifactId>json</artifactId>
 		   <version>20201115</version>
-		 </dependency>
+		 </dependency> -->
  		<!-- file upload -->
 		<dependency>
  			  <groupId>commons-fileupload</groupId>

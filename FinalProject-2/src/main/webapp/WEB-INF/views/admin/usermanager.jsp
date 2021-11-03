@@ -275,7 +275,7 @@
 											}else if(test4 == "" || test5 == "" && test6 == ""){
 												alert('주소를 입력하세요.');
 											}else{
-												location.href = "http://localhost:9009/usermodify?user_no=" + 
+												location.href = "/usermodify?user_no=" + 
 															${userlist.user_no} + "&user_email=" + 
 															$('#${userlist.user_no}user_email').val() + "&user_pw=" + 
 															$('#${userlist.user_no}user_pw').val() + "&user_name=" + 
@@ -303,7 +303,7 @@
 												$("#${userlist.user_no}delete").on("click", function(){
 													var result = confirm("정말로 해당회원을 삭제하시겠습니까?");
 													if(result){
-														$(location).attr("href", "http://localhost:9009/userdelete?user_no=" + ${userlist.user_no});
+														$(location).attr("href", "/userdelete?user_no=" + ${userlist.user_no});
 													}
 												});
 											

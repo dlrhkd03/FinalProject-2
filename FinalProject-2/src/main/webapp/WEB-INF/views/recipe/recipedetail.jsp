@@ -460,9 +460,6 @@ $(".zzim-notlogin").click(function() {
 	return false;
 });
 </script>
-	<script src="adminassets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="adminassets/js/bootstrap.bundle.min.js"></script>
-	<script src="adminassets/js/main.js"></script>
 </body>
 	
 </html>

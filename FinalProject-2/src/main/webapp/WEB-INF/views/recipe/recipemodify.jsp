@@ -918,7 +918,7 @@ div.editable {
 	</c:if>
 			<div id="img10"></div>
 			</td>
-			<th>레시피 내용10</th>
+			<th width="140px;">레시피 내용10</th>
 			<td><textarea class="form-control" rows="9" cols="50" name="recipe_desc">${desc.recipe_desc10}</textarea></td>
 			<input type="hidden" name="recipe_desc" id="recipe_desc" value="구간나누기입니다">
 		</tr>

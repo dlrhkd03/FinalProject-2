@@ -26,7 +26,7 @@
 	/* 키워드 관련 */
 	$(document).ready(function(){
 		$("#btn_search").on("click", function(){
-			$(location).attr("href", "http://localhost:9009/search?keyword=" + $("#keyword").val());
+			$(location).attr("href", "/search?keyword=" + $("#keyword").val());
 		});
 	});
 </script>
@@ -187,7 +187,7 @@
 								<img class="rounded-3" src="${resultlist.recipe_img }" height="200" width="200">
 							</c:if>
 							<c:if test="${not fn:contains(recipe_img, 'https')  }">
-								<img class="rounded-3" src="mainassets/assets/img/gallery/resultx.png" alt="..." style="width:200px;height:200px;object-fit: cover;">
+								<img class="rounded-3" src="upload/${resultlist.recipe_img }" alt="..." style="width:200px;height:200px;object-fit: cover;">
 							</c:if>
                         
                         <div class="card-img-overlay ps-0" style="padding:0rem;">
@@ -554,7 +554,7 @@
 		function detail(recipe_no){
 			var result = confirm("해당 레시피로 이동하시겠습니까?");
 			if(result){
-				location.href = "http://localhost:9009/recipedetail?recipe_no=" + recipe_no;
+				location.href = "/recipedetail?recipe_no=" + recipe_no;
 			}
 		}
     </script>

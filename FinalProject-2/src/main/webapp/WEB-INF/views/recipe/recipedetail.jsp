@@ -420,7 +420,7 @@ $(".zzim-click").click(function() {
 			type : 'get',
 			data : { no : no },
 			success : function() {
-				window.location.reload(true);
+				window.location.href("/recipedetail");
 				console.log("찜 추가");
 			},
 			error : function() {
@@ -441,7 +441,7 @@ $(".zzim-click").click(function() {
 			type : 'get',
 			data : { no : no },
 			success : function() {
-				window.location.reload(true);
+				window.location.href("/recipedetail");
 				console.log("찜 해제");
 			},
 			error : function() {

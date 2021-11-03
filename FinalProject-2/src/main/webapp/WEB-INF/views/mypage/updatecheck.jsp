@@ -106,7 +106,7 @@ function updatecheck() {
 <div id="main">
 <div class="page-heading" style="margin-top:90px;">
 <!-- 이 줄 아래에다가만 추가해주세요 -->     
-	<div class="col-lg-5 mx-auto text-center mb-4" style="background-color:#fff;border-radius:2rem;padding:1.5rem;">
+	<div class="col-lg-10 mx-auto text-center mb-4" style="background-color:#fff;border-radius:2rem;padding:1.5rem;">
 		<form action="/check" method="post">
 			<div class="col-lg-9 mx-auto text-center mb-4">
 				<h3 class="fw-bold fs-3 fs-lg-5 lh-sm mb-1">회원정보 수정</h3>

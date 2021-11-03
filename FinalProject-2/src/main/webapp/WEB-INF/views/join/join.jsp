@@ -161,7 +161,7 @@
 	<jsp:include page="/WEB-INF/views/main/header.jsp"></jsp:include><br>
     <div id="main">
 <div class="page-heading" style="margin-top:90px;">	  	
-<div class="col-lg-7 mx-auto text-center mb-4"><h5 class="fw-bold fs-3 fs-lg-5 lh-sm mb-1" style="margin-right:220px;">회원가입</h5></div>  
+<div class="col-lg-10 mx-auto text-center mb-4"><h5 class="fw-bold fs-3 fs-lg-5 lh-sm mb-1" style="margin-right:220px;">회원가입</h5></div>  
 
 
  <div class="modal-content w-75" style="margin-left:50px;">

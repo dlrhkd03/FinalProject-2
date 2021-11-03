@@ -421,8 +421,7 @@ $(".zzim-click").click(function() {
 			data : { no : no },
 			success : function() {
 				alert("찜목록에 추가되었습니다");
-				//location.href="/recipedetail?recipe_no=${recipe.recipe_no }";
-				window.location.replace("/recipedetail?recipe_no=${recipe.recipe_no }");
+
 
 			},
 			error : function() {
@@ -444,8 +443,7 @@ $(".zzim-click").click(function() {
 			data : { no : no },
 			success : function() {
 				alert("찜목록에서 삭제되었습니다");
-				//location.href="/recipedetail?recipe_no=${recipe.recipe_no }";
-				window.location.replace("/recipedetail?recipe_no=${recipe.recipe_no }");
+
 			},
 			error : function() {
 				alert("서버 에러");

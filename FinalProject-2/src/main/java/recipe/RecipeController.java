@@ -577,7 +577,7 @@ public class RecipeController {
 	}
 	
 	@ResponseBody
-	@RequestMapping("saveZzim.do")
+	@RequestMapping("/saveZzim.do")
 	public void zzimAdd(String no, HttpSession session) {
 		int recipe_no = Integer.parseInt(no);
 		UserVO vo = (UserVO)session.getAttribute("login_info");
@@ -589,7 +589,7 @@ public class RecipeController {
 	}
 	
 	@ResponseBody
-	@RequestMapping("removeZzim.do")
+	@RequestMapping("/removeZzim.do")
 	public void zzimDelete(String no, HttpSession session) {
 		int recipe_no = Integer.parseInt(no);
 		UserVO vo = (UserVO)session.getAttribute("login_info");

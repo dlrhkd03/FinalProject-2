@@ -230,7 +230,7 @@
             <div class="col-sm-6 col-md-4 col-lg-3 h-100 mb-5 hide" style="display:none;">
               <div class="card card-span h-100 text-white rounded-3" style="margin-bottom:0rem;">
               <a href='javascript:void(0);' onclick="detail('${myrecipelist.recipe_no}');">
-              <img class="img-fluid rounded-3 h-100" src="/upload/${myrecipelist.recipe_img }" alt="..." />
+              <img class="img-fluid rounded-3 h-100" src="/upload/${myrecipelist.recipe_img }" alt="..." style="width:333px;height:283px;object-fit: cover;"/>
               </a>
             
                 <div class="card-body p-2 " >
@@ -295,7 +295,7 @@
 			function detail(recipe_no){
 				var result = confirm("해당 레시피로 이동하시겠습니까?");
 				if(result){
-					location.href = "http://localhost:9009/recipedetail?recipe_no=" + recipe_no;
+					location.href = "/recipedetail?recipe_no=" + recipe_no;
 				}
 			}
 			

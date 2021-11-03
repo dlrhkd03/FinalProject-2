@@ -50,7 +50,7 @@
 				<button class="btn btn-primary mt-2" id="submitbtn" type="button" >확 &emsp; 인</button> 
 			</div>
 			<div>
-				<a id="join" href="http://localhost:9009/join"></a>
+				<a id="join" href="/join"></a>
 			</div>
         	
     </div>

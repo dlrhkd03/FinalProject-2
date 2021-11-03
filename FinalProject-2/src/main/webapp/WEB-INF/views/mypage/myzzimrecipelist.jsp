@@ -58,13 +58,12 @@
 									              "<div class='card card-span h-100 text-white rounded-3' style='margin-bottom:0rem;'>" + 
 							              "<a href='javascript:void(0);' onclick='detail(" + answer[i].recipe_no + ");'>" +
 							             "<img class='img-fluid rounded-3' src='" + answer[i].recipe_img + "' alt='...' style='width:333px;height:283px;object-fit: cover;' /></a>" + 
-							                "<div class='card-img-overlay ps-0' style='background-color: transparent; text-align: right;'>" + 
-							                	"<span class='badge p-2' style='background-color: transparent;'><a href='javascript:void(0);' onclick='delete1(" + answer[i].recipe_no + ");' style='color:#dc3545;'>" + 
-							                	"<i class='fas fa-heart'></i></a></span></div>" + 
 							                "<div class='card-body p-2'>" + 
 							                  "<div class='d-flex align-items-center mb-1'>" + 
 							                    "<div class='flex-1'>" + 
-							                      "<h5 class='mb-0 fw-bold text-1000'>" + answer[i].recipe_title + "</h5>" + 
+							                    "<div class='mb-0 fw-bold text-1000'>" + answer[i].recipe_title + 
+							                	"<a href='javascript:void(0);' onclick='delete1(" + answer[i].recipe_no + ");' style='color:#dc3545; float: right;'><i class='fas fa-heart' title='목록에서 삭제'></i></a>" + 
+								                 "</div>" + 
 							                      "<div><span style='color:black;'>" + answer[i].recipe_name + "</span></div>" + 
 							                      "<span class='text-primary fs--1' style='justify-content: flex-end;'>조회수</span>" + 
 							                      "<span class='mb-0 text-primary'>" + answer[i].recipe_hits + "</span>" + 
@@ -78,13 +77,12 @@
 									              "<div class='card card-span h-100 text-white rounded-3' style='margin-bottom:0rem;'>" + 
 							              "<a href='javascript:void(0);' onclick='detail(" + answer[i].recipe_no + ");'>" +
 							             "<img class='img-fluid rounded-3' src='/upload/" + answer[i].recipe_img + "' alt='...' style='width:333px;height:283px;object-fit: cover;' /></a>" + 
-							                "<div class='card-img-overlay ps-0' style='background-color: transparent; text-align: right;'>" + 
-							                	"<span class='badge p-2' style='background-color: transparent;'><a href='javascript:void(0);' onclick='delete1(" + answer[i].recipe_no + ");' style='color:#dc3545;'>" + 
-							                	"<i class='fas fa-heart'></i></a></span></div>" + 
 							                "<div class='card-body p-2'>" + 
 							                  "<div class='d-flex align-items-center mb-1'>" + 
 							                    "<div class='flex-1'>" + 
-							                      "<h5 class='mb-0 fw-bold text-1000'>" + answer[i].recipe_title + "</h5>" + 
+							                    "<div class='mb-0 fw-bold text-1000'>" + answer[i].recipe_title + 
+							                	"<a href='javascript:void(0);' onclick='delete1(" + answer[i].recipe_no + ");' style='color:#dc3545; float: right;'><i class='fas fa-heart' title='목록에서 삭제'></i></a>" + 
+								                 "</div>" + 
 							                      "<div><span style='color:black;'>" + answer[i].recipe_name + "</span></div>" + 
 							                      "<span class='text-primary fs--1' style='justify-content: flex-end;'>조회수</span>" + 
 							                      "<span class='mb-0 text-primary'>" + answer[i].recipe_hits + "</span>" + 
@@ -101,13 +99,12 @@
 									              "<div class='card card-span h-100 text-white rounded-3' style='margin-bottom:0rem;'>" + 
 									              "<a href='javascript:void(0);' onclick='detail(" + answer[i].recipe_no + ");'>" + 
 									              "<img class='img-fluid rounded-3' src='" + answer[i].recipe_img + "' alt='...' style='width:333px;height:283px;object-fit: cover;' /></a>" + 
-									                "<div class='card-img-overlay ps-0' style='background-color: transparent; text-align: right;'>" + 
-									                	"<span class='badge p-2' style='background-color: transparent;'><a href='javascript:void(0);' onclick='delete1(" + answer[i].recipe_no + ");' style='color:#dc3545;'>" + 
-									                	"<i class='fas fa-heart'></i></a></span></div>" + 
 									                "<div class='card-body p-2'>" + 
 									                  "<div class='d-flex align-items-center mb-1'>" + 
 									                    "<div class='flex-1'>" + 
-									                      "<h5 class='mb-0 fw-bold text-1000'>" + answer[i].recipe_title + "</h5>" + 
+									                      "<div class='mb-0 fw-bold text-1000'>" + answer[i].recipe_title + 
+										                	"<a href='javascript:void(0);' onclick='delete1(" + answer[i].recipe_no + ");' style='color:#dc3545; float: right;'><i class='fas fa-heart' title='목록에서 삭제'></i></a>" + 
+											                 "</div>" + 
 									                      "<div><span style='color:black;'>" + answer[i].recipe_name + "</span></div>" + 
 									                      "<span class='text-primary fs--1' style='justify-content: flex-end;'>조회수</span>" + 
 									                      "<span class='mb-0 text-primary'>" + answer[i].recipe_hits + "</span>" + 
@@ -121,13 +118,12 @@
 										              "<div class='card card-span h-100 text-white rounded-3' style='margin-bottom:0rem;'>" + 
 										              "<a href='javascript:void(0);' onclick='detail(" + answer[i].recipe_no + ");'>" + 
 										              "<img class='img-fluid rounded-3' src='/upload/" + answer[i].recipe_img + "' alt='...' style='width:333px;height:283px;object-fit: cover;' /></a>" + 
-										                "<div class='card-img-overlay ps-0' style='background-color: transparent; text-align: right;'>" + 
-										                	"<span class='badge p-2' style='background-color: transparent;'><a href='javascript:void(0);' onclick='delete1(" + answer[i].recipe_no + ");' style='color:#dc3545;'>" + 
-										                	"<i class='fas fa-heart'></i></a></span></div>" + 
 										                "<div class='card-body p-2'>" + 
 										                  "<div class='d-flex align-items-center mb-1'>" + 
 										                    "<div class='flex-1'>" + 
-										                      "<h5 class='mb-0 fw-bold text-1000'>" + answer[i].recipe_title + "</h5>" + 
+										                    "<div class='mb-0 fw-bold text-1000'>" + answer[i].recipe_title + 
+										                	"<a href='javascript:void(0);' onclick='delete1(" + answer[i].recipe_no + ");' style='color:#dc3545; float: right;'><i class='fas fa-heart' title='목록에서 삭제'></i></a>" + 
+											                 "</div>" + 
 										                      "<div><span style='color:black;'>" + answer[i].recipe_name + "</span></div>" + 
 										                      "<span class='text-primary fs--1' style='justify-content: flex-end;'>조회수</span>" + 
 										                      "<span class='mb-0 text-primary'>" + answer[i].recipe_hits + "</span>" + 
@@ -270,9 +266,11 @@
                 <div class="card-body p-2 " >
                   <div class="d-flex align-items-center mb-1">
                     <div class="flex-1">
+                    
                       <div class="mb-0 fw-bold text-1000">${myzzimrecipelist.recipe_title }
 	                	<a href='javascript:void(0);' onclick="delete1(${myzzimrecipelist.recipe_no});" style="color:#dc3545; float: right;"><i class="fas fa-heart" title="목록에서 삭제"></i></a>
 	                 </div>
+	                 
                       <div><span style="color:black;">${myzzimrecipelist.recipe_name }</span></div>
                       <span class="text-primary fs--1" style="justify-content: flex-end;">조회수</span>
                       <span class="mb-0 text-primary">${myzzimrecipelist.recipe_hits}</span>
@@ -287,7 +285,7 @@
             <div class="col-sm-6 col-md-4 col-lg-3 h-100 mb-5 hide" style="display:none;">
               <div class="card card-span h-100 text-white rounded-3" style="margin-bottom:0rem;">
               <a href='javascript:void(0);' onclick="detail(${myzzimrecipelist.recipe_no});">
-            	  <img title="상세 페이지로 이동" class="img-fluid rounded-3 h-100" src="/upload/${myzzimrecipelist.recipe_img }" alt="..." />
+            	  <img title="상세 페이지로 이동" class="img-fluid rounded-3 h-100" src="/upload/${myzzimrecipelist.recipe_img }" alt="..." style="width:333px;height:283px;object-fit: cover;"/>
               </a>
                 
                 <div class="card-body p-2 " >
@@ -355,7 +353,7 @@
 				var result = confirm("해당 레시피를 목록에서 삭제하시겠습니까?");
 				if(result){
 					alert("찜한레시피 메인으로 이동합니다.");
-					location.href = "http://localhost:9009/myzzimdelete?recipe_no=" + recipe_no;
+					location.href = "/myzzimdelete?recipe_no=" + recipe_no;
 				}
 			}
 			
@@ -363,7 +361,7 @@
 			function detail(recipe_no){
 				var result = confirm("해당 레시피로 이동하시겠습니까?");
 				if(result){
-					location.href = "http://localhost:9009/recipedetail?recipe_no=" + recipe_no;
+					location.href = "/recipedetail?recipe_no=" + recipe_no;
 				}
 			}
 			

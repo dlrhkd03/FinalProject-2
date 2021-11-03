@@ -420,6 +420,7 @@ $(".zzim-click").click(function() {
 			type : 'get',
 			data : { no : no },
 			success : function() {
+				alert("찜목록에 추가되었습니다");
 				document.location.reload(true);
 				console.log("찜 추가");
 			},
@@ -441,6 +442,7 @@ $(".zzim-click").click(function() {
 			type : 'get',
 			data : { no : no },
 			success : function() {
+				alert("찜목록에서 삭제되었습니다");
 				document.location.reload(true);
 				console.log("찜 해제");
 			},

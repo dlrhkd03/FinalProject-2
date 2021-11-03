@@ -32,7 +32,6 @@ import recipe.RecipeDAO;
 @ComponentScan(basePackageClasses = NaverChatbotController.class)
 @MapperScan(basePackageClasses = UserDAO.class)
 @MapperScan(basePackageClasses = RecipeDAO.class)
-@MapperScan(basePackageClasses = NoticeDAO.class)
 @MapperScan(basePackageClasses = MypageDAO.class)
 @MapperScan(basePackageClasses = AdminDAO.class)
 @MapperScan(basePackageClasses = NoticeDAO.class)

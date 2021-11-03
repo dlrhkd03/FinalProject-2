@@ -94,11 +94,11 @@
 <div class=card id="recipe">
 <div class="card-body px-2 py-1">
 	<div class="row">
-		<div class="col"  style="min-height:400px; max-width:470px;">
+		<div class="col"  style="min-height:400px; max-width:470px; line-height:550px;">
 
 		<c:set var="recipe_img" value="${recipe.recipe_img }"/>
 		<c:if test="${fn:contains(recipe_img, 'https')}">
-			<img src="${recipe.recipe_img }"  class="img-fluid my-6" style="width:450px ;align:center" >
+			<img src="${recipe.recipe_img }"  class="img-fluid my-6" style="width:450px ;align:center;  vertical-align:middle; " >
 		</c:if>
 		<c:if test="${not fn:contains(recipe_img, 'https')  }">
 			<img src="/upload/${recipe.recipe_img }" height=auto width="450">
@@ -110,7 +110,7 @@
 	<!-- nation -->
 	<tr>
 		<td colspan="3">
-		<h4 style="font::bold; max-width:650px; float: center" class="mb-2">
+		<h4 style="font::bold; max-width:650px; float: center" class="mb-5 mt-4">
 		${recipe.recipe_title }
 		<c:choose>
 			<%-- 로그인 상태시 하트 클릭가능 --%>
@@ -148,10 +148,6 @@
 		</h4>
 		</td>
 	</tr>
-	<tr>
-		<td></td>
-		<td class="font-weight-light fst-italic" colspan="1" style="float:right; ">${recipe.recipe_date } 작성</td>
-	</tr>
 	<tr style="height:"class="mt-4" >
 		<th>음식 이름</th>
 		<td colspan="2">${recipe.recipe_name }
@@ -183,6 +179,10 @@
 		<td colspan="2">
 		${recipe.recipe_emotion }
 		</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td class="font-weight-light fst-italic mt-4" colspan="1" style="float:right; ">${recipe.recipe_date } 작성</td>
 	</tr>
 	</table>
 		</div>
@@ -421,8 +421,9 @@ $(".zzim-click").click(function() {
 			data : { no : no },
 			success : function() {
 				alert("찜목록에 추가되었습니다");
-				document.location.reload(true);
-				console.log("찜 추가");
+				location.href="/recipedetail?recipe_no=${recipe.recipe_no }";
+
+
 			},
 			error : function() {
 				alert("서버 에러");
@@ -443,8 +444,7 @@ $(".zzim-click").click(function() {
 			data : { no : no },
 			success : function() {
 				alert("찜목록에서 삭제되었습니다");
-				document.location.reload(true);
-				console.log("찜 해제");
+				location.href="/recipedetail?recipe_no=${recipe.recipe_no }";
 			},
 			error : function() {
 				alert("서버 에러");
@@ -462,9 +462,6 @@ $(".zzim-notlogin").click(function() {
 	return false;
 });
 </script>
-	<script src="adminassets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="adminassets/js/bootstrap.bundle.min.js"></script>
-	<script src="adminassets/js/main.js"></script>
 </body>
 	
 </html>

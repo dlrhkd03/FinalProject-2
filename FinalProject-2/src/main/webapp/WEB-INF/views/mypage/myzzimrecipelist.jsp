@@ -61,7 +61,7 @@
 							                "<div class='card-body p-2'>" + 
 							                  "<div class='d-flex align-items-center mb-1'>" + 
 							                    "<div class='flex-1'>" + 
-							                    "<div class='mb-0 fw-bold text-1000'>" + answer[i].recipe_title + 
+							                    "<div class='mb-0 fw-bold text-1000 text-truncate'>" + answer[i].recipe_title + 
 							                	"<a href='javascript:void(0);' onclick='delete1(" + answer[i].recipe_no + ");' style='color:#dc3545; float: right;'><i class='fas fa-heart' title='목록에서 삭제'></i></a>" + 
 								                 "</div>" + 
 							                      "<div><span style='color:black;'>" + answer[i].recipe_name + "</span></div>" + 

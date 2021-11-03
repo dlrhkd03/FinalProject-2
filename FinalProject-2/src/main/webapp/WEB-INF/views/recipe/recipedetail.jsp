@@ -94,7 +94,7 @@
 <div class=card id="recipe">
 <div class="card-body px-2 py-1">
 	<div class="row">
-		<div class="col"  style="min-height:400px; max-width:470px; line-height:550px;">
+		<div class="col"  style="min-height:400px; max-height:540px; max-width:470px; line-height:550px;">
 
 		<c:set var="recipe_img" value="${recipe.recipe_img }"/>
 		<c:if test="${fn:contains(recipe_img, 'https')}">

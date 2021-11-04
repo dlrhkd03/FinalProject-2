@@ -41,7 +41,7 @@ p{
 }
 
 #chatbox {
-	margin-left: 10px;
+	margin-left: 6px;
 	margin-top: 10px;
 }
 
@@ -102,11 +102,13 @@ function send(){
 						else if(bubbles[b].data.cover.type == 'text'){
 							var desc = bubbles[b].data.cover.data.description;
 							$("#messageWindow").append
-							("<div id='answer' style='background-color:#FFDF09; border-radius:5px 5px 5px 5px; margin:10px'>" 
+							("<div id='answer' style='background-color:#FFDF09; border-radius:4px 4px 4px 4px; margin:10px'>" 
 							+ desc + "</div><br>");
 						}
 						for(var c in bubbles[b].data.contentTable){
 							for(var d in bubbles[b].data.contentTable[c]){
+								var title = bubbles[b].data.contentTable[c][d].data.title;
+								$("#messageWindow").append("<a id = 'answer1'> " + title + " </a><br>");
 							}
 						}
 					}
@@ -125,20 +127,7 @@ function send(){
 <div id="chatbox" style="display:none">
 	<div id="messageWindow" style="background-color:white; width:460px; height:600px; overflow:scroll;"></div>
 	<input id="inputMessage" type=text style="width:380px;">
-	<button type="button" id="sendBtn" class="btn btn-warning" style="width: 60px; height: 30px; padding: 0px 10px;">전송</button>
+	<button type="button" id="sendBtn" style="width: 60px; height: 30px; padding: 0px 10px;">전송</button>
 </div>
 </body>
 </html>
-<!--
-<script type="text/javascript">
-function chatbot(){ 
-	chatbot = window.open("chatbotstart","","height=640,width=480,top=100,left=100");
-}
-</script>
-
-<body > 
-	 <a href="#" onclick="chatbot()">클릭</a>
-</body>
--->
-
-

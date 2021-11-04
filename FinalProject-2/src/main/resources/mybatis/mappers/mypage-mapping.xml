@@ -49,7 +49,7 @@ delete from zzim_recipe where recipe_no = #{recipe_no} and user_no = #{user_no}
 select a.recipe_no, a.user_no, a.recipe_date, a.recipe_title, a.recipe_name, a.recipe_nation, a.recipe_img, a.recipe_hits 
 from recipe a left join rec_desc b on a.recipe_no = b.recipe_no
 where a.recipe_title like CONCAT('%',#{keyword},'%') or a.recipe_name like CONCAT('%',#{keyword},'%') or a.recipe_ingredient like CONCAT('%',#{keyword},'%') or a.recipe_nation like CONCAT('%',#{keyword},'%') or b.recipe_desc like CONCAT('%',#{keyword},'%')   
-order by a.recipe_hits asc limit 3
+order by a.recipe_hits desc limit 3
 </select>
 
 <select id="getMainRecipePopular" resultType="myrecipeVO">

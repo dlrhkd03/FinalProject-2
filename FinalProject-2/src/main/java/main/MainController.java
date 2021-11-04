@@ -93,7 +93,7 @@ public class MainController {
 			if(ingred.contains("대두")) {
 				for(int i = findList.size()-1 ; i >= 0 ; i--){
 					String ingredient = findList.get(i).getRecipe_ingredient();
-					if(ingredient.contains("콩") ||ingredient.contains("된장") || ingredient.contains("미소") || ingredient.contains("간장")){
+					if(ingredient.contains("콩") ||ingredient.contains("된장") || ingredient.contains("미소") || ingredient.contains("간장") || ingredient.contains("두부")){
 						findList.remove(i);
 					}
 				}
@@ -101,7 +101,7 @@ public class MainController {
 			if(ingred.contains("유제품")) {
 				for(int i = findList.size()-1 ; i >= 0 ; i--){
 					String ingredient = findList.get(i).getRecipe_ingredient();
-					if(ingredient.contains("우유") || ingredient.contains("치즈") || ingredient.contains("버터")){
+					if(ingredient.contains("우유") || ingredient.contains("치즈") || ingredient.contains("버터") || ingredient.contains("계란") || ingredient.contains("빵") || ingredient.contains("달걀")){
 						findList.remove(i);
 					}
 				}
@@ -110,6 +110,22 @@ public class MainController {
 				for(int i = findList.size()-1 ; i >= 0 ; i--){
 					String ingredient = findList.get(i).getRecipe_ingredient();
 					if(ingredient.contains("홍합") || ingredient.contains("굴") || ingredient.contains("전복") || ingredient.contains("오징어") || ingredient.contains("새우") || ingredient.contains("게") || ingredient.contains("조개")){
+						findList.remove(i);
+					}
+				}
+			}
+			if(ingred.contains("생선")) {
+				for(int i = findList.size()-1 ; i >= 0 ; i--){
+					String ingredient = findList.get(i).getRecipe_ingredient();
+					if(ingredient.contains("가자미") || ingredient.contains("연어") || ingredient.contains("갈치") || ingredient.contains("고등어") || ingredient.contains("굴비") || ingredient.contains("꽁치") || ingredient.contains("대구")|| ingredient.contains("고다리")|| ingredient.contains("도미")|| ingredient.contains("동태")|| ingredient.contains("명태") || ingredient.contains("북어") || ingredient.contains("방어") || ingredient.contains("밴댕이") || ingredient.contains("병어")){
+						findList.remove(i);
+					}
+				}
+			}
+			if(ingred.contains("밀")) {
+				for(int i = findList.size()-1 ; i >= 0 ; i--){
+					String ingredient = findList.get(i).getRecipe_ingredient();
+					if(ingredient.contains("빵") || ingredient.contains("면")){
 						findList.remove(i);
 					}
 				}

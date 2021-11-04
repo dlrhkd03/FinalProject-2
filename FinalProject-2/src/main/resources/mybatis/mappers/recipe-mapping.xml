@@ -43,7 +43,7 @@
 	FROM recipe, (SELECT @ROWNUM := 0) R
 	order by recipe_no desc
 	) A
-	where r between #{number} - 5 and #{number} and recipe_desc like #{search} and 
+	where r between #{number} - 5 and #{number} and recipe_name like #{search} and 
 	recipe_emotion like #{emotion} and recipe_cate like #{cate} and recipe_nation like #{nation}
 </select>
 <select id="SearchIngredient" resultType="recipeVO">

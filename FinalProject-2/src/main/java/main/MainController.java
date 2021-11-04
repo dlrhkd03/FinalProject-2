@@ -101,7 +101,7 @@ public class MainController {
 			if(ingred.contains("유제품")) {
 				for(int i = findList.size()-1 ; i >= 0 ; i--){
 					String ingredient = findList.get(i).getRecipe_ingredient();
-					if(ingredient.contains("우유") || ingredient.contains("치즈") || ingredient.contains("버터")){
+					if(ingredient.contains("우유") || ingredient.contains("치즈") || ingredient.contains("버터") || ingredient.contains("계란") || ingredient.contains("빵") || ingredient.contains("달걀")){
 						findList.remove(i);
 					}
 				}

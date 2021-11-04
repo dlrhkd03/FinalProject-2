@@ -223,7 +223,7 @@ $(document).ready(function(){
                                                     <td><a style="padding :5px 15px;" id="육류" href="javascript:goSearchRecipe('cate','육류')">육 류</a></td>
                                                     <td><a style="padding :5px 15px;" id="채소류" href="javascript:goSearchRecipe('cate','채소류')">채소류</a></td>
                                                     <td><a style="padding :5px 15px;" id="해물류" href="javascript:goSearchRecipe('cate','해물류')">해물류</a></td>
-                                                    <td><a style="padding :5px 15px;" id="달걀유제품" href="javascript:goSearchRecipe('cate','달걀유제품')">달걀/유제품</a></td>
+                                                    <td><a style="padding :5px 15px;" id="달걀유제품" href="javascript:goSearchRecipe('cate','달걀/유제품')">달걀/유제품</a></td>
                                                     <td><a style="padding :5px 15px;" id="기타" href="javascript:goSearchRecipe('cate','기타')">기 타</a></td>
                                                 </tr>
                                                 

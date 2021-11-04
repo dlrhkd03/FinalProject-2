@@ -104,15 +104,15 @@ function updatecheck() {
         </div>
         
 <div id="main">
-<div class="page-heading" style="margin-top:90px;">
+<div class="page-heading" style="margin-top:120px;">
 <!-- 이 줄 아래에다가만 추가해주세요 -->     
-	<div class="col-lg-10 mx-auto text-center mb-4" style="background-color:#fff;border-radius:2rem;padding:1.5rem;">
+	<div class="col-lg-7 mx-auto text-center mb-4" style="background-color:#fff;border-radius:2rem;padding:1.5rem;">
 		<form action="/check" method="post">
 			<div class="col-lg-9 mx-auto text-center mb-4">
 				<h3 class="fw-bold fs-3 fs-lg-5 lh-sm mb-1">회원정보 수정</h3>
 			</div>
 			<div class="row">
-				<div class="col-md-4 fw-bold fs-5 mt-1">비밀번호 확인 : </div>
+				<div class="col-md-3 fw-bold fs-5 mt-1">비밀번호 확인</div>
 				<div class="col-md-8 form-group">
 				<input class="form-control" type="password" name="user_pw" id = "user_pw"/> 
 				</div>

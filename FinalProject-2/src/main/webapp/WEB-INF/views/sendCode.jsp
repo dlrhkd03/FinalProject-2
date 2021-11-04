@@ -27,7 +27,7 @@
 
 	<!-- 이동호 -->
 <div id="main" style="margin-left:50px;">
-<div class="page-heading" style="margin-top:90px;">	 
+<div class="page-heading" style="margin-top:120px;">	 
     <div class="col-lg-5 mx-auto text-center mb-4" style="background-color:#fff;border-radius:2rem;padding:1.5rem;">
         
             <h2>이메일 인증하기</h2>
@@ -35,14 +35,14 @@
                 <br>
                 
             <div class="row">
-				<div class="col-md-3 fw-bold fs-5 mt-1" style="text-align: left;" >이메일 입력 : </div>
-				<div class="col-md-9 form-group">
+				<div class="col-md-2 fw-bold fs-5 mt-1" style="text-align: left;" >이메일 입력</div>
+				<div class="col-md-8 form-group" style="width:75%;">
 					<input class="form-control" type="text" value="${email}" readonly="readonly">
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-3 fw-bold fs-5 mt-1" style="text-align: left;">인증번호 : </div>
-				<div class="col-md-9 form-group">
+				<div class="col-md-2 fw-bold fs-5 mt-1" style="text-align: left;">인증번호</div>
+				<div class="col-md-8 form-group">
 					<input class="form-control" id="inputCode" type="text"/>
 				</div>
 			</div>

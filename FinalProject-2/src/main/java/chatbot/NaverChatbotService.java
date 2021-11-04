@@ -21,8 +21,8 @@ public class NaverChatbotService implements NaverService {
 		return test(voiceMessage, "send");
 	}
 	public String test(String voiceMessage, String event) {
-		String apiURL = "https://edebfac940cd47bf8f16a0c8c28cd6bd.apigw.ntruss.com/custom/v1/5584/b915fa331486cad3d49010934caf19fc4c31302a9c175967c94c9309cae30344";
-        String secretKey = "WVpoSGNmTUpBUmZsdmtBWmd3enRHTnhBR213Y3lhR1o=";
+		String apiURL = "https://edebfac940cd47bf8f16a0c8c28cd6bd.apigw.ntruss.com/custom/v1/5725/91381d5d1896b93465d7b19165a27832b64ecd4fc7a4462120ccf81408ae9c99";
+        String secretKey = "dnVCZlhOWWxSd0tiUHhScFVtaFJtVEtkSU5BbnJiR0E=";
 		String chatbotMessage = "";
 
         try {
@@ -99,7 +99,7 @@ public class NaverChatbotService implements NaverService {
             bubbles_obj.put("type", "text");
 
             JSONObject data_obj = new JSONObject();
-            data_obj.put("description", voiceMessage); //질문내용 
+            data_obj.put("description", voiceMessage);
 
             bubbles_obj.put("type", "text");
             bubbles_obj.put("data", data_obj);
@@ -115,6 +115,10 @@ public class NaverChatbotService implements NaverService {
         } catch (Exception e){
             System.out.println("## Exception : " + e);
         }
+
         return requestBody;
+
     }
+
+	
 }

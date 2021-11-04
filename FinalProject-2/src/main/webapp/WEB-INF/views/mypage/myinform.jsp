@@ -283,7 +283,7 @@
              	<input class="form-control w-25" style="display:inline;" type="text" id="user_address1" name="user_address" value ="${address[0]}"  placeholder="우편번호" readonly="readonly"/>
                      <button type='button' class="btn btn-primary ml-1 " style="display:inline;" onclick="execPostCode();">우편번호</button>
                  <input class="form-control mt-1" type="text" id="user_address2" name="user_address" value ="${address[1]}"  placeholder="주소" readonly="readonly"/>
-                 <input class="form-control mt-1" type="text" id="user_address3" name="user_address" placeholder="상세 주소" />
+                 <input class="form-control mt-1" type="text" id="user_address3" name="user_address" value ="${address[2]}" placeholder="상세 주소" />
              </div>
          </div>
          <div class="modal-footer">

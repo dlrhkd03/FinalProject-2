@@ -98,10 +98,10 @@
 
 		<c:set var="recipe_img" value="${recipe.recipe_img }"/>
 		<c:if test="${fn:contains(recipe_img, 'https')}">
-			<img src="${recipe.recipe_img }"  class="img-fluid my-6" style="width:450px ;align:center;  vertical-align:middle; " >
+			<img src="${recipe.recipe_img }"  class="img-fluid my-6" style="width:450px ;max-height:540px;align:center;  vertical-align:middle; " >
 		</c:if>
 		<c:if test="${not fn:contains(recipe_img, 'https')  }">
-			<img src="/upload/${recipe.recipe_img }" height=auto width="450">
+			<img src="/upload/${recipe.recipe_img }" height=auto width="450" style="max-height:540px;">
 		</c:if>
 		</div>
 		

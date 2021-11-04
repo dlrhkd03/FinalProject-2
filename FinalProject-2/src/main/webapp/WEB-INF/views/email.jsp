@@ -34,7 +34,7 @@
 					alert("사용할 수 있는 이메일입니다.");
 					$('#mail').attr('readonly', true);
 					$('#mail').attr('onclick', "");
-					$("#send").append('<input class="btn btn-primary mt-2" id="submit" type="submit" value="인증번호 전송"/>');
+					$("#send").html('<input class="btn btn-primary mt-2" id="submit" type="submit" value="인증번호 전송"/>');
 				} else{
 					alert("가입된 이메일이 있습니다.")
 					$("#email").focus();

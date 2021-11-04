@@ -421,8 +421,6 @@ $(".zzim-click").click(function() {
 			data : { no : no },
 			success : function() {
 				alert("찜목록에 추가되었습니다");
-
-
 			},
 			error : function() {
 				alert("서버 에러");
@@ -443,7 +441,6 @@ $(".zzim-click").click(function() {
 			data : { no : no },
 			success : function() {
 				alert("찜목록에서 삭제되었습니다");
-
 			},
 			error : function() {
 				alert("서버 에러");

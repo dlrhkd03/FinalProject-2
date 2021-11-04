@@ -125,7 +125,7 @@ public class RecipeController {
 		//파일명 추출
 		List<String> filename = new ArrayList<String>();
 		//서버 c:/kdigital2/upload 폴더에 사진 저장
-		String savePath = "file:/usr/mydir/upload/";
+		String savePath = "/usr/mydir/upload/";
 		List<String> ext = new ArrayList<String>();
 		List<File> file = new ArrayList<File>();
 		
@@ -322,7 +322,7 @@ public class RecipeController {
 		String filename;
 		String ext;
 		//서버 c:/kdigital2/upload 폴더에 사진 저장
-		String savePath = "file:/usr/mydir/upload/";
+		String savePath = "/usr/mydir/upload/";
 		File file;
 		
 		//썸네일 사진 저장
@@ -564,7 +564,7 @@ public class RecipeController {
 	}
 	
 	public static void store(MultipartFile img) throws IOException {
-		String savePath = "file:/usr/mydir/upload/";
+		String savePath = "/usr/mydir/upload/";
 		String filename = img.getOriginalFilename();
 		//확장자
 		String ext = (filename.substring(filename.lastIndexOf(".")));

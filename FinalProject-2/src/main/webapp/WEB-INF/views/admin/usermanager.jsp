@@ -184,10 +184,10 @@
 																<c:set var="address" value="${fn:split(imsi,',')}"/>					
                                                                 <label>주소: </label>
                                                                 <div class="form-group">
-                                                                	<input type="text" placeholder="우편번호"
+                                                                	<input type="text" placeholder="우편번호" readonly="readonly"
                                                                         class="form-control w-25" style="display:inline;" id='${userlist.user_no}user_address1' value='${address[0]}'>
                                                                         <button type='button' class="btn btn-primary ml-1" style="display:inline;" onclick="execPostCode${userlist.user_no}();">우편번호</button>
-                                                                    <input type="text" placeholder="도로명주소"
+                                                                    <input type="text" placeholder="도로명주소" readonly="readonly"
                                                                         class="form-control w-100 mt-1 mb-1" id='${userlist.user_no}user_address2' value='${address[1]}'>
                                                                     <input type="text" placeholder="상세주소"
                                                                         class="form-control" id='${userlist.user_no}user_address3'>

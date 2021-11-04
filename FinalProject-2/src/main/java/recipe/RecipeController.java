@@ -260,7 +260,7 @@ public class RecipeController {
 			descservice.deleteDesc(recipe_no);
 			imgservice.deleteImg(recipe_no);
 			service.deleteRecipe(recipe_no);
-			return "/recipe/recipelist";
+			return "redirect:recipelist";
 		}
 		return "/recipe/usernoerror";
 	}

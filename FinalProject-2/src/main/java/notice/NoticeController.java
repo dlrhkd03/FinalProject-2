@@ -84,7 +84,7 @@ public class NoticeController{
 			// 파일명
 			String filename = uploadfile.getOriginalFilename();
 			// 저장소
-			String savePath = "file:/usr/mydir/upload/";
+			String savePath = "/usr/mydir/upload/";
 			// 저장
 			File file_result = new File(savePath + filename);
 			uploadfile.transferTo(file_result);
@@ -120,7 +120,7 @@ public class NoticeController{
 			// 파일명
 			String filename = uploadfile.getOriginalFilename();
 			// 저장소
-			String savePath = "file:/usr/mydir/upload/";
+			String savePath = "/usr/mydir/upload/";
 			// 저장
 			File file_result = new File(savePath + filename);
 			uploadfile.transferTo(file_result);

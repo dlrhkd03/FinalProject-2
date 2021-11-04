@@ -140,13 +140,23 @@
 					return false;
 				}
 				
-				if($("#user_address").val() == ""){
+				if($("#user_address1").val() == ""){
+					alert("우편번호를 작성해주세요.");
+					$("#user_address1").focus();
+					return false;
+				}
+				if($("#user_address2").val() == ""){
 					alert("주소를 입력해주세요.");
-					$("#user_address").focus();
+					$("#user_address2").focus();
+					return false;
+				}
+				if($("#user_address3").val() == ""){
+					alert("상세 주소를 입력해주세요.");
+					$("#user_address3").focus();
 					return false;
 				}
 				
-				if(confirm("회원가입을 하시겠습니까?") == true){
+				if(confirm("회원가입을 하시겠습니까?")){
 					 alert("회원가입이 완료되었습니다. 감사합니다.");
 			         return true;    
 			    }
@@ -200,9 +210,10 @@
 			<c:set var="address" value="${fn:split(imsi,',')}"/>					
              <label>주소: </label>
              <div class="form-group">
-             	<input class="form-control w-25" style="display:inline;" type="text" id="user_address1" name="user_address" placeholder="우편번호" />
+             	<input class="form-control w-25" style="display:inline;" type="text" id="user_address1" name="user_address" placeholder="우편번호" readonly="readonly"/>
                      <button type='button' class="btn btn-primary ml-1 " style="display:inline;" onclick="execPostCode();">우편번호</button>
-                 <input class="form-control" type="text" id="user_address2" name="user_address" placeholder="주소" />
+                 <input class="form-control" type="text" id="user_address2" name="user_address" placeholder="주소" readonly="readonly"/>
+                 <input class="form-control" type="text" id="user_address3" name="user_address" placeholder="상세 주소" />
              </div>
          </div>
          <div class="modal-footer">

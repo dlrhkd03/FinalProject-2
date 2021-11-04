@@ -10,6 +10,7 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>FinalProject-2</artifactId>
+
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>FinalProject-2</name>
@@ -18,6 +19,7 @@
 		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
+	
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
@@ -51,6 +53,13 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+			   <exclusions>
+		        <exclusion>
+		            <groupId>com.vaadin.external.google</groupId>
+		            <artifactId>android-json</artifactId>
+		        </exclusion>
+    </exclusions>
+			
 		</dependency>
 		
 				<!-- for jsp -->

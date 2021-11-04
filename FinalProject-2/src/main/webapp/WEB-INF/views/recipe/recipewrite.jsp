@@ -642,10 +642,10 @@ $(function(){
 		}
 		//음식이름
 		const name = document.getElementById('recipe_name').value;
-		const regex2 = /^.{1,}$/;
+		const regex2 = /^.{1,20}$/;
 		const regex3 = /^[가-힣]+$/;
 		if(regex2.test(name) == false) {
-			alert("음식 이름은 1글자 이상 작성해주세요")
+			alert("음식 이름은 1글자 이상 20글자 이하로 작성해주세요")
 			$("#recipe_name").focus();
 			return false;
 		}

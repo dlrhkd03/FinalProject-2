@@ -379,7 +379,7 @@
 									<div><span><input class="cate" type="radio" id="recipe_cate" name="recipe_cate" value="육류">육류</span></div>
 									<div><span><input class="cate" type="radio" name="recipe_cate" value="해물류">해물류</span></div>
 									<div><span><input class="cate" type="radio" name="recipe_cate" value="채소류">채소류</span></div>
-									<div><span><input class="cate" type="radio" name="recipe_cate" value="달걀유제품류">달걀/유제품류</span></div>
+									<div><span><input class="cate" type="radio" name="recipe_cate" value="달걀/유제품류">달걀/유제품류</span></div>
 									<div><span><input class="cate" type="radio" name="recipe_cate" value="">상관없음</span></div>
 									</div>
 								</td>
